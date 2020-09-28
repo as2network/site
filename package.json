@@ -1,0 +1,38 @@
+{
+  "name": "@fr8/as2network-site",
+  "private": true,
+  "version": "1.26.4",
+  "license": "Apache 2.0",
+  "engines": {
+    "node": "12.x"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "gatsby develop -H 0.0.0.0",
+    "dev:clean": "yarn clean && yarn develop",
+    "build": "gatsby build",
+    "build:clean": "yarn clean && gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "vercel": "vercel",
+    "vercel:dev": "vercel dev",
+    "vercel:env:pull": "vercel env pull",
+    "vercel:login": "vercel login"
+  },
+  "dependencies": {
+    "@slack/web-api": "^5.11.0",
+    "bottleneck": "^2.19.5",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.20.4",
+    "gatsby-theme-carbon": "1.26.6",
+    "node-fetch": "^2.6.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.3.0",
+    "react-use-auth": "^0.7.5",
+    "vercel": "^19.2.0"
+  }
+}
