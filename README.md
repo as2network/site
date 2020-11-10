@@ -3,6 +3,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/09ca02a5-5738-4af4-98c9-e0944ab5c41c/deploy-status)](https://app.netlify.com/sites/as2network/deploys)
 
+```
                         -------------
 
               _____/\\\\\\\\\_________/\\\\\\\\\\\_______/\\\\\\\\\_____        
@@ -16,39 +17,11 @@
                        _\///________\///_____\///////////______\///////////////__
 
 
-                                   v0.7.0 Edition
+                                    www: http://as2.network
 
-                           Maidenlane is an AS2-protocol server 
-                       with a built-in {{ application.FEATURES }}.
+                      
 
-                        Start application:
-                        $ Maidenlane start {{ application.SERVICE }}
-
-                        Load Balance 4 endpoints of {{ application.NETWORK }}:
-                        $ Maidenlane start {{ application.NETWORK }} {{ application.CLI }}
-
-                        Monitor in production:
-                        $ ml monitor
-
-                        Make Maidenlane auto-boot at server restart:
-                        $ Maidenlane startup
-
-                        To go further checkout:
-                        www: http://maidenlane.net 
-
-
-                        -------------
-
-usage: $ ml2 [options] <command>
-
-{{ application.CLI }} -h, --help             all available commands and options
-{{ application.CLI }} examples               display {{ application.CLI }} usage examples
-{{ application.CLI }} <command> -h           help on a specific command
-
-
-
-                        -------------
-
+```
 
 | **Field**                                                                                                                                                                                                                                                   | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
