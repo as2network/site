@@ -22,7 +22,7 @@ body {
 // revert header nav overrides
 .container--header--nav:not(.container--homepage) .bx--grid {
   @include carbon--breakpoint("lg") {
-		background: #000000;
+    background: #000000;
     padding-left: calc(25% + 2rem);
   }
   @include carbon--breakpoint("max") {

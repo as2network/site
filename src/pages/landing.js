@@ -40,7 +40,8 @@ const Landing = () => {
               <a href="https://www.freighttrust.com/services/customs/overview">
                 Customs
               </a>{" "}
-               Log in with OAuth2 to view and apply for  access to the Freight Trust Network.
+              Log in with OAuth2 to view and apply for access to the Freight
+              Trust Network.
             </h1>
           </div>
         </div>

@@ -11,7 +11,6 @@ import { useAuth } from "../util/hooks/use-auth.js";
 
 // import style from "./pages.module.scss";
 
-
 const Login = () => {
   const { login } = useAuth();
 
@@ -19,8 +18,10 @@ const Login = () => {
     login();
   }, [login]);
   return (
-    <Layout homepage><p className={style.copy}>Logging in...</p>;  </Layout>
-	);
+    <Layout homepage>
+      <p className={style.copy}>Logging in...</p>;{" "}
+    </Layout>
+  );
 };
 
 export default Login;

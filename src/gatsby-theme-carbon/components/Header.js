@@ -16,109 +16,109 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-import React, { useContext } from 'react';
-import { Link } from 'gatsby';
+import React, { useContext } from "react";
+import { Link } from "gatsby";
 import {
-    Header as ShellHeader,
-    HeaderMenuButton,
-    SkipToContent,
-    HeaderGlobalBar,
-    HeaderGlobalAction,
-} from 'carbon-components-react';
-import { AppSwitcher20, Close20 } from '@carbon/icons-react';
-import cx from 'classnames';
+  Header as ShellHeader,
+  HeaderMenuButton,
+  SkipToContent,
+  HeaderGlobalBar,
+  HeaderGlobalAction,
+} from "carbon-components-react";
+import { AppSwitcher20, Close20 } from "@carbon/icons-react";
+import cx from "classnames";
 
-import HeaderNav from 'gatsby-theme-carbon/src/components/HeaderNav/HeaderNav';
-import NavContext from 'gatsby-theme-carbon/src/util/context/NavContext';
-import useMetadata from 'gatsby-theme-carbon/src/util/hooks/useMetadata';
-
-import {
-    header,
-    switcherButtonOpen,
-    skipToContent,
-    headerName,
-    headerButton,
-    switcherButton,
-} from 'gatsby-theme-carbon/src/components/Header/Header.module.scss';
+import HeaderNav from "gatsby-theme-carbon/src/components/HeaderNav/HeaderNav";
+import NavContext from "gatsby-theme-carbon/src/util/context/NavContext";
+import useMetadata from "gatsby-theme-carbon/src/util/hooks/useMetadata";
 
 import {
-    navLists,
-    navLeftBorder,
-    navLink,
-    globalBar,
-} from './Header.module.scss';
+  header,
+  switcherButtonOpen,
+  skipToContent,
+  headerName,
+  headerButton,
+  switcherButton,
+} from "gatsby-theme-carbon/src/components/Header/Header.module.scss";
+
+import {
+  navLists,
+  navLeftBorder,
+  navLink,
+  globalBar,
+} from "./Header.module.scss";
 // href="https://freight.page.link/request-information"
 const Header = ({ children }) => {
-    const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
-        NavContext
-    );
-    const { navigationStyle } = useMetadata();
+  const { leftNavIsOpen, toggleNavState, switcherIsOpen } = useContext(
+    NavContext
+  );
+  const { navigationStyle } = useMetadata();
 
-    return (
-        <ShellHeader
-            href="https://freight.page.link/request-information"
-            aria-label="Header"
-            className={header}
-        >
-            <SkipToContent
-                href="https://freight.page.link/request-information"
-                className={skipToContent}
-            />
+  return (
+    <ShellHeader
+      href="https://freight.page.link/request-information"
+      aria-label="Header"
+      className={header}
+    >
+      <SkipToContent
+        href="https://freight.page.link/request-information"
+        className={skipToContent}
+      />
 
-            <HeaderMenuButton
-                className={cx(`bx--header__action--menu`, headerButton)}
-                aria-label="Open menu"
-                onClick={() => {
-                    toggleNavState(`leftNavIsOpen`);
-                    toggleNavState(`switcherIsOpen`, `close`);
-                }}
-                isActive={leftNavIsOpen}
-            />
-            {/** 
+      <HeaderMenuButton
+        className={cx(`bx--header__action--menu`, headerButton)}
+        aria-label="Open menu"
+        onClick={() => {
+          toggleNavState(`leftNavIsOpen`);
+          toggleNavState(`switcherIsOpen`, `close`);
+        }}
+        isActive={leftNavIsOpen}
+      />
+      {/** 
 TODO: Fix NAVIGATION ITEMS HERE 
 */}
-            <Link className={headerName} to="https://freighttrust.com">
-                FR8TRUST
-            </Link>
+      <Link className={headerName} to="https://freighttrust.com">
+        FR8TRUST
+      </Link>
 
-            <div className={navLists}>
-                <div className={navLeftBorder} />
-                <Link className={navLink} to="#">
-                    Solutions
-                </Link>
-                <Link className={navLink} to="#">
-                    X12
-                </Link>
-                <Link className={navLink} to="#">
-                    EDIFACT
-                </Link>
-                <Link className={navLink} to="#">
-                    AS2
-                </Link>
-                <Link className={navLink} to="#">
-                    Contact
-                </Link>
-            </div>
+      <div className={navLists}>
+        <div className={navLeftBorder} />
+        <Link className={navLink} to="#">
+          Solutions
+        </Link>
+        <Link className={navLink} to="#">
+          X12
+        </Link>
+        <Link className={navLink} to="#">
+          EDIFACT
+        </Link>
+        <Link className={navLink} to="#">
+          AS2
+        </Link>
+        <Link className={navLink} to="#">
+          Contact
+        </Link>
+      </div>
 
-            {navigationStyle && <HeaderNav />}
+      {navigationStyle && <HeaderNav />}
 
-            <HeaderGlobalBar className={globalBar}>
-                <HeaderGlobalAction
-                    className={cx(headerButton, switcherButton, {
-                        [switcherButtonOpen]: switcherIsOpen,
-                    })}
-                    aria-label="Switch"
-                    onClick={() => {
-                        toggleNavState(`switcherIsOpen`, `close`);
-                        toggleNavState(`searchIsOpen`, `close`);
-                        toggleNavState(`leftNavIsOpen`, `close`);
-                    }}
-                >
-                    {switcherIsOpen ? <Close20 /> : <AppSwitcher20 />}
-                </HeaderGlobalAction>
-            </HeaderGlobalBar>
-        </ShellHeader>
-    );
+      <HeaderGlobalBar className={globalBar}>
+        <HeaderGlobalAction
+          className={cx(headerButton, switcherButton, {
+            [switcherButtonOpen]: switcherIsOpen,
+          })}
+          aria-label="Switch"
+          onClick={() => {
+            toggleNavState(`switcherIsOpen`, `close`);
+            toggleNavState(`searchIsOpen`, `close`);
+            toggleNavState(`leftNavIsOpen`, `close`);
+          }}
+        >
+          {switcherIsOpen ? <Close20 /> : <AppSwitcher20 />}
+        </HeaderGlobalAction>
+      </HeaderGlobalBar>
+    </ShellHeader>
+  );
 };
 
 export default Header;

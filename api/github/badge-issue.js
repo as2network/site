@@ -85,12 +85,12 @@ module.exports = async (req, res) => {
       },
       body: JSON.stringify({
         data: {
-          "2": { value: badgeConfig.badges[badge].label },
-          "3": { value: questionHowDescribe },
-          "4": { value: questionLikeBest },
-          "5": { value: questionHowImprove },
-          "6": { value: questionSuggestion },
-          "7": { value: questionFreeform },
+          2: { value: badgeConfig.badges[badge].label },
+          3: { value: questionHowDescribe },
+          4: { value: questionLikeBest },
+          5: { value: questionHowImprove },
+          6: { value: questionSuggestion },
+          7: { value: questionFreeform },
         },
       }),
     });
